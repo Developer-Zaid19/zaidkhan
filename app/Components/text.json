@@ -1,0 +1,47 @@
+[
+    {
+        "id":1,
+        "name": "mystory",
+        "paragraph": "My journey into technology started in 10th grade, at a time when I did not even know what coding truly meant. I had chosen Computer as an optional subject, and during my summer holidays, out of curiosity and free time, I opened my textbook just to understand technology better. I was already interested in electronics — resistors, capacitors, diodes, and transistors fascinated me — so I naturally wanted to explore how software worked alongside hardware. The first chapter in the book was about the C programming language. I did not even know what that language was, but when I searched online, I discovered that it was a way to communicate with computers. That moment sparked something in me. What began as simple curiosity slowly turned into consistent learning."
+    },
+    {
+        "id":2,
+        "name": "phased",
+        "paragraph": "The early phase of my journey was not easy. When I started learning coding, I did not even have a personal computer. I began practicing on a basic mobile coding application that was often buggy and unreliable. I did not know about modern online platforms at that time. Internet access was limited, and I had to manage with restricted data availability. I downloaded tutorials whenever possible and transferred them between devices just so I could continue learning. Even after getting access to a computer, internet connectivity remained inconsistent. Development environments felt complicated at first, so I continued practicing through web-based tools. Progress was slow, errors were frequent, and frustration was common — but that period built my resilience. Every technical issue, every limitation, and every mistake strengthened my problem-solving mindset."
+    },
+    {
+        "id":3,
+        "name": "project",
+        "paragraph": "Over time, with consistent effort and proper internet access, I transitioned from learning basics to building real-world projects. I built my personal blog platform as a full-stack application using Next.js and Tailwind CSS on the frontend, with an Express and MongoDB backend. The frontend and backend are deployed separately using modern hosting platforms. As the owner of my blog system, instead of creating a traditional web-based admin panel, I designed and developed a dedicated Android admin application connected directly to my Express backend. The native version was built using Kotlin and Jetpack Compose, optimized even for older Android versions. Later, while learning cross-platform development, I rebuilt the admin panel using React Native to ensure compatibility with modern Android systems."
+    },
+    {
+        "id":4,
+        "name":"otherskill",
+        "paragraph":"Beyond web and mobile development, I have also explored Python for data analysis and predictive modeling. I have worked with NumPy, Pandas, Matplotlib, and Scikit-learn to build basic prediction models and understand how data-driven systems function. I also learned Flask to ensure that, whenever required, I can integrate Python-based analytics or AI models with my backend systems."
+    },
+    {
+        "id":5,
+        "name":"passionweb",
+        "paragraph":"I specialize in Full-Stack Web Development using HTML, CSS, JavaScript, React.js, and Next.js for frontend development, along with Node.js, Express, MongoDB, and MySQL for backend systems. I develop structured, scalable web applications with proper deployment architecture."
+    },
+    {
+        "id":6,
+        "name":"passionapp",
+        "paragraph":"I also provide Mobile App Development services, including native Android development using Kotlin and Jetpack Compose, as well as cross-platform development using React Native. I have experience building backend-connected mobile systems, especially administrative dashboards that directly communicate with APIs."
+    },
+    {
+        "id":7,
+        "name":"passionanalytics",
+        "paragraph":"Additionally, I offer minimal data analytics solutions for dashboards, startup-level prediction models, and backend-connected analytical systems. I am particularly interested in building integrated ecosystems where websites, mobile applications, and backend servers work together seamlessly — similar to the architecture of my own platform."
+    },
+    {
+        "id":8,
+        "name":"education",
+        "paragraph":"I am currently pursuing my higher secondary education with Physics, Chemistry, and Mathematics as my core subjects. My academic background in mathematics supports my logical thinking and problem-solving abilities, which directly complement my programming skills. Alongside formal education, I continue to self-learn modern technologies and apply them through practical projects."
+    },
+    {
+        "id":9,
+        "name":"goal",
+        "paragraph":"My long-term goal is to work closely with startups and emerging businesses that require strong technical foundations. I aim to help build scalable digital systems for organizations that rely heavily on technology for growth. I believe in continuous learning, adapting to new tools, and evolving with industry demands. Technology changes rapidly, and I intend to grow with it — consistently improving my skills and building impactful solutions."
+    }
+]
