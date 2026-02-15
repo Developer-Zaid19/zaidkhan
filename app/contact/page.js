@@ -8,23 +8,23 @@ export default function Contact() {
     formState: { errors, isSubmitting },
   } = useForm();
 
-const submithandle = async (formData) => {
-  const res = await fetch("/api/contact", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(formData),
-  });
+  const submithandle = async (formData) => {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
 
-  const result = await res.json();
+    const result = await res.json();
 
-  if (!result.success) {
-    alert("We are trying to reply faster");
-  } else {
-    alert("I will contact you soon");
-  }
-};
+    if (!result.success) {
+      alert("We are trying to reply faster");
+    } else {
+      alert("I will contact you soon");
+    }
+  };
 
 
   return (
