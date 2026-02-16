@@ -8,7 +8,7 @@ import {
   FaLinkedin,
   FaGithub,
 } from "react-icons/fa6";
-
+import Link from "next/link";
 const sociallinkes = [
   { icon: <FaLinkedin />, href: "httpsL//www.linkedin.com/in/developer-zaid29" },
   { icon: <FaGithub />, href: "https://github.com/Developer-Zaid19" },
@@ -58,26 +58,40 @@ export default function Home() {
                 </a>
               ))}
             </div>
+            <div className='flex flex-row gap-4 items-center justify-center md:justify-start'>
+              <button className="bg-(--maincolor) rounded-lg text-(--bgcolor) font-bold p-3 text-sm "            
+              >
+                <Link
+                href="/contact"
+                >
+                Free Consultation
+                </Link>
+              </button>
+              {/* <button className="bg-transparent rounded-lg border-2 border-(--maincolor) text-(--maincolor) font-semibold w-fit h-fit p-3 text-sm">
+                View My Work
+              </button> */}
+            </div>
+            
           </div>
 
           {/* RIGHT IMAGE */}
           <div className="relative flex justify-center order-1 lg:order-2
 ">
             <div
-              className="w-64 h-64 sm:w-80 sm:h-80 bg-linear-to-b from-(--maincolor) to-(--bgfcolor) flex items-center justify-center shadow-[0_0_40px_#22d3ee]"
+              className="w-72 h-72 sm:w-96 sm:h-96 bg-linear-to-b from-(--maincolor) to-(--bgfcolor) flex items-center justify-center shadow-[0_0_40px_#22d3ee]"
               style={{
                 clipPath:
                   "polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%)",
               }}
             >
               <img
-                src="/android.png"
+                src="/zaidkhan.png"
                 alt="profile"
-                className="w-full h-full object-cover"
-                style={{
-                  clipPath:
-                    "polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%)",
-                }}
+                className="mt-16 object-cover w-56 sm:w-fit"
+                // style={{
+                //   clipPath:
+                //     "polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%)",
+                // }}
               />
             </div>
           </div>
@@ -96,12 +110,12 @@ export default function Home() {
           viewport={{ once: true }}
           className="flex justify-center"
         >
-          <div  className="relative h-64 w-64 sm:h-80 sm:w-80 overflow-hidden rounded-full">
+          <div  className="relative h-64 w-64 sm:h-80 sm:w-80 overflow-hidden rounded-full ">
             <Image
-              src="/android.png"
+              src="/zaidkhanwhoi.png"
               alt="Profile"
               fill
-              className="object-cover"
+              className="object-cover transform -scale-x-100"
             />
           </div>
         </motion.div>
@@ -225,8 +239,19 @@ export default function Home() {
             </div>
 
           </div>
-
         </div>
+        <div className='mt-10 sm:mt-20 flex items-center justify-center '>
+          <button className="bg-(--maincolor) rounded-lg text-(--bgcolor) font-bold p-3 text-sm w-[50vw] md:w-[30vw]"            
+              >
+                <Link
+                href="/contact"
+                className="mx-auto"
+                >
+                Start Project
+                </Link>
+              </button>
+        </div>
+        
       </section>
 
 

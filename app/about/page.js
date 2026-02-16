@@ -2,6 +2,7 @@
 import React from 'react'
 import text from "../Components/text.json"
 import { motion } from "framer-motion";
+import Link from 'next/link';
 
 const Page = () => {
 
@@ -34,7 +35,7 @@ const Page = () => {
 
       <div className="bg-gray-600 opacity-40 w-full h-px"></div>
 
-      {/* I Faced */}
+      {/* I Faced
       <section className="py-16 text-center">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <motion.h2
@@ -54,7 +55,7 @@ const Page = () => {
             {getParagraphById(2)}
           </motion.p>
         </div>
-      </section>
+      </section> */}
 
       <div className="bg-gray-600 opacity-40 w-full h-px"></div>
 
@@ -143,6 +144,17 @@ const Page = () => {
             </p>
           </motion.div>
 
+        </div>
+         <div className='mt-15 sm:mt-20 flex items-center justify-center '>
+          <button className="bg-(--maincolor) rounded-2xl text-(--bgcolor) font-bold p-3 text-sm w-[60vw] md:w-[40vw]"          
+              >
+                <Link
+                href="/contact"
+                className="mx-auto"
+                >
+                Start Any Project
+                </Link>
+              </button>
         </div>
       </section>
     </main>

@@ -2,10 +2,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Router from "next/router";
 
 
 export default function Skills() {
 
+  const router = Router
 
   const tech = [
     { name: "HTML / CSS", urll: "htmlcss" },
@@ -93,8 +95,19 @@ export default function Skills() {
                 <li>Domain Setup</li>
               </ul>
             </div>
-
           </div>
+          <div className='mt-10 sm:mt-20 flex items-center justify-center '>
+            <button className="bg-(--maincolor) rounded-2xl text-(--bgcolor) font-bold p-3 text-sm w-[60vw] md:w-[40vw]"
+            >
+              <Link
+                href="/contact"
+                className="mx-auto"
+              >
+                Start Project
+              </Link>
+            </button>
+          </div>
+
         </motion.div>
       </section>
 

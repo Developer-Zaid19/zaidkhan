@@ -1,5 +1,6 @@
 "use client"
 import { useForm } from "react-hook-form";
+import Link from "next/link";
 
 export default function Contact() {
   const {
@@ -112,6 +113,22 @@ export default function Contact() {
           </form>
         </div>
 
+      </div>
+      <div className='mt-20 sm:mt-20 flex flex-col sm:flex-row gap-5  items-center justify-center '>
+        <button className="bg-(--maincolor) rounded-xl text-(--bgcolor) font-bold p-3 text-sm w-[60vw] md:w-[40vw]"
+        >
+          <a
+          href="mailto:developerzaid26@gmail.com"
+          >Email Me</a>
+        </button>
+        <button className="border-2 border-(--maincolor) rounded-xl text-(--maincolor) bg-transparent font-bold p-3 text-sm w-[60vw] md:w-[40vw]"
+        >
+          <Link
+          href={'https://wa.me/919044337110?text=Hi%20I%20want%20a%20website%20like%20this'
+}>
+          Whatsapp Me
+          </Link>
+        </button>
       </div>
     </main>
   );
