@@ -1,3 +1,4 @@
+// hey claude this is contact page code
 "use client"
 import { useForm } from "react-hook-form";
 import Link from "next/link";

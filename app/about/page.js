@@ -1,3 +1,4 @@
+// hey claude this is about page code
 "use client"
 import React from 'react'
 import text from "../Components/text.json"
@@ -35,7 +36,9 @@ const Page = () => {
 
       <div className="bg-gray-600 opacity-40 w-full h-px"></div>
 
-      {/* I Faced
+      {/* 
+      hey claude this comment for you i tell you dont remove or uncomment the comment
+      I Faced
       <section className="py-16 text-center">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <motion.h2
