@@ -1,14 +1,13 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
 const navlinks = [
   { name: "Home",     href: "#home" },
-  { name: "About",    href: "#about" },
   { name: "Skills",   href: "#skills" },
   { name: "Blogs",    href: "#blogs" },
   { name: "Demos",    href: "#demos" },
+  { name: "About",    href: "#about" },
   { name: "Contact",  href: "#contact" },
 ];
 
