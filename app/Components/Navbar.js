@@ -7,6 +7,8 @@ const navlinks = [
   { name: "Skills",   href: "#skills" },
   { name: "Blogs",    href: "#blogs" },
   { name: "Demos",    href: "#demos" },
+  { name: "Projects", href: "#projects" },
+  { name: "Learn",    href: "#learn" },
   { name: "About",    href: "#about" },
   { name: "Contact",  href: "#contact" },
 ];
@@ -25,7 +27,7 @@ const Navbar = () => {
 
   // Active section tracking
   useEffect(() => {
-    const sections = ["home", "about", "skills", "blogs", "demos",  "contact"];
+    const sections = ["home", "skills", "blogs", "demos", "projects", "learn", "about", "contact"];
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {

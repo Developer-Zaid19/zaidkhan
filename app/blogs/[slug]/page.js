@@ -43,7 +43,8 @@ export default function BlogSlug({ params }) {
   // ── Error / Not found ──
   if (error || !blog) {
     return (
-      <main className="min-h-screen flex items-center justify-center px-4">
+      <main className="min-h-screen flex items-center justify-center px-4">        
+        
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -54,7 +55,7 @@ export default function BlogSlug({ params }) {
             Blog Not Found
           </h1>
           <p className="text-(--text-muted) text-sm mb-8 leading-relaxed">
-            This blog does not exist or may have been removed.
+            Check Your Internet Connection, This blog does not exist or may have been removed.
           </p>
           <Link
             href="/blogs"

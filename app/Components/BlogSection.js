@@ -2,32 +2,11 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "lucide-react";
+import { blogs } from "../Components/homeData"
+
 
 export default function BlogSection() {
-  const [blogs, setBlogs] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
 
-  useEffect(() => {
-    const fetchBlogs = async () => {
-      try {
-        const res = await fetch(
-          "https://devzaidbackend.onrender.com/api/content/blogs",
-          { cache: "no-store" }
-        );
-        if (!res.ok) { setError(true); return; }
-        const data = await res.json();
-        // sirf latest 3 blogs
-        setBlogs(data.slice(0, 3));
-      } catch (err) {
-        console.error("Blog fetch error:", err);
-        setError(true);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchBlogs();
-  }, []);
   return (
     <section id="blogs" className="py-24 px-4 sm:px-6 lg:px-16 bg-(--bgsection)">
       <div className="max-w-6xl mx-auto">
@@ -58,46 +37,6 @@ export default function BlogSection() {
           </a>
         </motion.div>
     
-        {/* ── Loading state ── */}
-        {loading && (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[1, 2, 3].map((i) => (
-              <div
-                key={i}
-                className="glass rounded-2xl p-6 animate-pulse space-y-4"
-              >
-                <div className="h-3 w-1/3 bg-[rgba(34,197,94,0.1)] rounded-full" />
-                <div className="h-5 w-3/4 bg-[rgba(34,197,94,0.08)] rounded-full" />
-                <div className="space-y-2">
-                  <div className="h-3 w-full bg-[rgba(255,255,255,0.04)] rounded-full" />
-                  <div className="h-3 w-5/6 bg-[rgba(255,255,255,0.04)] rounded-full" />
-                  <div className="h-3 w-4/6 bg-[rgba(255,255,255,0.04)] rounded-full" />
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-    
-        {/* ── Error state ── */}
-        {!loading && error && (
-          <div className="glass rounded-2xl p-10 text-center">
-            <p className="text-2xl mb-3">📡</p>
-            <p className="text-(--text-muted) text-sm">
-              Could not load blogs right now.{" "}
-              <a
-                href="https://developerzaid.vercel.app/blogs"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-(--maincolor) underline hover:opacity-80"
-              >
-                Visit blog site directly →
-              </a>
-            </p>
-          </div>
-        )}
-    
-        {/* ── Blog Cards ── */}
-        {!loading && !error && (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {blogs.map((blog, i) => (
               <motion.div
@@ -135,8 +74,8 @@ export default function BlogSection() {
                 <div className="mt-6 pt-4 border-t border-(--border) flex items-center justify-between">
                   <span className="text-xs text-(--text-muted)">📖 Read article</span>
                   <a
-                    href={`https://developerzaid.vercel.app/blogs/${blog.id}`}
-                    target="_blank"
+                    href={`./blogs/${blog.url}`}
+                    // href={`./blogs/1234.pdf`}
                     rel="noopener noreferrer"
                     className="text-sm font-semibold text-(--maincolor) hover:glow-text hover:underline transition-all duration-300 flex items-center gap-1"
                   >
@@ -147,35 +86,6 @@ export default function BlogSection() {
               </motion.div>
             ))}
           </div>
-        )}
-    
-        {/* ── Empty state ── */}
-        {!loading && !error && blogs.length === 0 && (
-          <div className="glass rounded-2xl p-10 text-center">
-            <p className="text-2xl mb-3">✍️</p>
-            <p className="text-(--text-muted) text-sm">No blogs yet. Coming soon!</p>
-          </div>
-        )}
-    
-        {/* ── Bottom CTA ── */}
-        {!loading && !error && blogs.length > 0 && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            viewport={{ once: true }}
-            className="text-center mt-12"
-          >
-            <a
-              href="https://developerzaid.vercel.app/blogs"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-8 py-3.5 rounded-xl bg-(--maincolor) text-(--bgcolor) font-bold text-sm hover:shadow-[0_0_30px_var(--mainglow-strong)] hover:scale-105 transition-all duration-300"
-            >
-              Read All Blogs →
-            </a>
-          </motion.div>
-        )}
     
       </div>
     </section>

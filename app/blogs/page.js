@@ -3,6 +3,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { fadeUp } from "../Components/animations";
+import { project } from "../Components/homeData"
 import Loader from "../Components/Loader"
 
 
