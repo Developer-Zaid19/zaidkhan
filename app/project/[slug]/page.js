@@ -20,7 +20,7 @@ export default function ProjectCaseStudy({ params }) {
       try {
         const { slug } = await params;
         const res = await fetch(
-          `http://localhost:5000/api/content/projects/${slug}`,
+          `https://devzaidbackend.onrender.com/api/content/projects/${slug}`,
           { cache: "no-store" }
         );
         if (!res.ok) { setError(true); return; }

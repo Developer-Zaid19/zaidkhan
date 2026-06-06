@@ -13,7 +13,7 @@ export default function NotesPage() {
         const fetchNotes = async () => {
             try {
                 const res = await fetch(
-                    "http://localhost:5000/api/content/notes",
+                    "https://devzaidbackend.onrender.com/api/content/notes",
                     { cache: "no-store" }
                 );
                 if (!res.ok) { setError(true); return; }

@@ -4,15 +4,15 @@ const nextConfig = {
     return [
       {
         source: "/notes/pdf/:id",
-        destination: `http://localhost:5000/note-pdf/${":id"}.pdf`,
+        destination: `https://devzaidbackend.onrender.com/note-pdf/${":id"}.pdf`,
       },
       {
         source: "/notes/img/:id",
-        destination: `http://localhost:5000/notes-img/${":id"}`,
+        destination: `https://devzaidbackend.onrender.com/notes-img/${":id"}`,
       },
       {
         source: "/projects/img/:id",
-        destination: `http://localhost:5000/projects/${":id"}`,
+        destination: `https://devzaidbackend.onrender.com/projects/${":id"}`,
       },
     ];
   },

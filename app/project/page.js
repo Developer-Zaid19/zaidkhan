@@ -18,7 +18,7 @@ export default function projectsPage() {
         const fetchprojects = async () => {
             try {
                 const res = await fetch(
-                    "http://localhost:5000/api/content/projects",
+                    "https://devzaidbackend.onrender.com/api/content/projects",
                     { cache: "no-store" }
                 );
                 if (!res.ok) { setError(true); return; }
