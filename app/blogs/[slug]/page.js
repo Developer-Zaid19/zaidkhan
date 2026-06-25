@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 import Loader from "../../Components/Loader";
 
 export default function BlogSlug({ params }) {
-  const [blog,    setBlog]    = useState(null);
+  const [blog, setBlog] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error,   setError]   = useState(false);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     const fetchBlog = async () => {
@@ -43,8 +43,8 @@ export default function BlogSlug({ params }) {
   // ── Error / Not found ──
   if (error || !blog) {
     return (
-      <main className="min-h-screen flex items-center justify-center px-4">        
-        
+      <main className="min-h-screen flex items-center justify-center px-4">
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

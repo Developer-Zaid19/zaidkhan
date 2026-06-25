@@ -32,21 +32,21 @@ export default function NotesPage() {
     console.log(notes)
     return (
         <main className="min-h-screen px-4 py-14 mt-7">
-                        {/* Back to Home */}
-                        <motion.div
-                            variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
-                            className="mb-10"
-                        >
-                            <Link
-                                href="/#projects"
-                                className="inline-flex items-center gap-2 text-sm text-(--text-muted) hover:text-(--maincolor) transition-colors duration-200"
-                            >
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-                                </svg>
-                                Back to Home
-                            </Link>
-                        </motion.div>
+            {/* Back to Home */}
+            <motion.div
+                variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
+                className="mb-10"
+            >
+                <Link
+                    href="/#projects"
+                    className="inline-flex items-center gap-2 text-sm text-(--text-muted) hover:text-(--maincolor) transition-colors duration-200"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    Back to Home
+                </Link>
+            </motion.div>
             <div className="max-w-5xl mx-auto">
 
                 {/* ── Header ── */}
