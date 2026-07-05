@@ -102,7 +102,7 @@ export default function projectsPage() {
 
                 {!loading && !error && (
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:px-10">
-                        {projects.projects.map((t, i) => (
+                        {projects.map((t, i) => (
                             <motion.div
                                 key={t.id}
                                 initial={{ opacity: 0, y: 30 }}
@@ -114,17 +114,6 @@ export default function projectsPage() {
 
                                 {/* ── Preview Image ── */}
                                 <div className="relative overflow-hidden h-52 bg-[rgba(34,197,94,0.04)]">
-
-                                    {/* Placeholder — jab tak screenshot nahi lagaate */}
-                                    {/* <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-gradient-to-br from-[rgba(34,197,94,0.08)] to-[rgba(2,6,23,0.8)]">
-                  <span className="text-6xl">{t.emoji}</span>
-                  <span className="text-xs text-(--text-muted) tracking-widest uppercase">
-                    Preview
-                  </span>
-                </div> */}
-
-                                    {/* Real screenshot — uncomment karo jab image laga lo */}
-
                                     <img
                                         src={`/projects/img/${t.image}`}
                                         alt={t.title}
