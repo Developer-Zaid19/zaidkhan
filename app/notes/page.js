@@ -101,10 +101,10 @@ export default function NotesPage() {
 
                         {/* Notes Grid */}
                         <div className="max-w-6xl mx-auto">
-                            {/* card */}
 
+                            {/* card */}
                             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 md:gap-10 gap-5">
-                                {notes.notes.map((note, i) => (
+                                {notes.map((note, i) => (
                                     <motion.a
                                         key={note.id}
                                         href={`/notes/pdf/${note.url}`}
@@ -114,13 +114,13 @@ export default function NotesPage() {
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.4, delay: i * 0.08 }}
                                         viewport={{ once: true }}
-                                        className="group relative"
+                                        className="group"
                                     >
                                         {/* Paper Card */}
                                         <div
                                             className="
                                             relative
-                                           h-[250px] 
+                                           h-[300px] 
                                             px-6
                                             py-7
                                             glass
@@ -215,7 +215,7 @@ export default function NotesPage() {
 
                         </div>
 
-                        {/* Stats bottom */}
+                        {/* Stats bottom
                         {notes.length > 0 && (
                             <motion.div
                                 initial={{ opacity: 0 }}
@@ -226,7 +226,7 @@ export default function NotesPage() {
                                 {filtered.length} note{filtered.length !== 1 ? "s" : ""} available
                                 {filter !== "All" && ` in "${filter}"`}
                             </motion.div>
-                        )}
+                        )} */}
                     </>
                 )}
 

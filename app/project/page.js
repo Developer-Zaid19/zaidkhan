@@ -115,7 +115,7 @@ export default function projectsPage() {
                                 {/* ── Preview Image ── */}
                                 <div className="relative overflow-hidden h-52 bg-[rgba(34,197,94,0.04)]">
                                     <img
-                                        src={`/projects/img/${t.image}`}
+                                        src={`/projects/img${t.image}`}
                                         alt={t.title}
                                         className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                                     />
@@ -132,6 +132,9 @@ export default function projectsPage() {
                                     <p className="text-sm text-(--text-muted) leading-relaxed mb-4">
                                         {t.description}
                                     </p>
+                                    {/* <p className="text-sm text-(--text-muted) leading-relaxed mb-4">
+                                        {`/projects/img${t.image}`}
+                                    </p> */}
 
                                     {/* Tags */}
                                     <div className="flex flex-wrap gap-2 mb-5">
